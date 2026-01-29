@@ -92,4 +92,14 @@ const modulecs = (f,g) => f%g;
 let resultway = modulecs(15,15);
 console.log(resultway);
 
+const btn = document.getElementById("button");
 
+btn.addEventListener("click", function () {
+  let inputValue = document.getElementById("input").value;
+  let output = document.getElementById("output");
+
+  if (inputValue !== "") {
+    output.innerHTML += inputValue + "<br>";
+    document.getElementById("input").value = "";
+  }
+});
